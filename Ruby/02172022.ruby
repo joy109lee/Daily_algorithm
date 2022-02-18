@@ -24,16 +24,11 @@ def parse_int(string)
         "sixty" => 60, "seventy" => 70, "eighty" => 80, "ninety" => 90}
     @mul = { "hundred" => 100, "thousand" => 1000, "million" =>  1000000 };    
     string = string.sub('-', ' ').sub(' and', '').split(' ')
-
     def helper(string,val)
         return val if string.empty?
         el = string[0]
-        if @numbers.include?(el)
-            val += @numbers[el]
-        end
-        if @mul.include?(el)
-            val *= @mul[el]
-        end
+        val += @numbers[el] if @numbers.include?(el)
+        val += @mul[el] * (val % @mul[el]) - (val % @mul[el]) if @mul.include?(el)
         return helper(string[1..],val)
     end
     return helper(string, 0)
@@ -47,7 +42,10 @@ string = "ten"
 
 p parse_int(string)
 
-string = "ten thousand"
+string = "ten thousand eighteen"
 
 p parse_int(string)
 
+string = "one thousand three hundred thirty seven "
+
+p parse_int(string)
