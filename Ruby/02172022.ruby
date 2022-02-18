@@ -23,7 +23,8 @@ def parse_int(string)
         "seventeen" => 17, "eighteen" => 18, "nineteen" => 19, "twenty" => 20, "thirty" => 30, "forty" => 40, "fifty" => 50, 
         "sixty" => 60, "seventy" => 70, "eighty" => 80, "ninety" => 90}
     @mul = { "hundred" => 100, "thousand" => 1000, "million" =>  1000000 };    
-    string = string.sub('-', ' ').sub(' and', '').split(' ')
+    string = string.gsub('-', ' ').gsub(' and', '').split(' ')
+    p string
     def helper(string,val)
         return val if string.empty?
         el = string[0]
@@ -42,10 +43,14 @@ string = "ten"
 
 p parse_int(string)
 
-string = "ten thousand eighteen"
+string = "one hundred and twenty-four"
 
 p parse_int(string)
 
 string = "one thousand three hundred thirty seven "
 
+p parse_int(string)
+
+
+string = "twenty-six thousand three hundred and fifty-nine"
 p parse_int(string)
