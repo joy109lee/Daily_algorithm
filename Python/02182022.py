@@ -13,3 +13,17 @@ the secret string will never contain letters that do not occur in one of the tri
 
 def recoverSecret(triplets):
     'triplets is a list of triplets from the secrent string. Return the string.'
+
+
+secret = "whatisup"
+triplets = [
+    ['t', 'u', 'p'],
+    ['w', 'h', 'i'],
+    ['t', 's', 'u'],
+    ['a', 't', 's'],
+    ['h', 'a', 'p'],
+    ['t', 'i', 's'],
+    ['w', 'h', 's']
+]
+
+print((recoverSecret(triplets), secret))
