@@ -18,14 +18,15 @@ def recoverSecret(triplets):
         for char in arr:
             if char not in list:
                 list.append(char)
-
+    print(list)
     for arr in triplets:
         for i in range(2):
             if list.index(arr[i]) > list.index(arr[i+1]):
+                print(arr[i])
                 list.remove(arr[i])
                 list.append(arr[i])
 
-    return list.join("")
+    return "".join(list)
 
 
 secret = "whatisup"
@@ -39,4 +40,4 @@ triplets = [
     ['w', 'h', 's']
 ]
 
-print((recoverSecret(triplets), secret))
+print(recoverSecret(triplets))
