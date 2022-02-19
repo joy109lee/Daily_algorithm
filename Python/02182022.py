@@ -13,6 +13,19 @@ the secret string will never contain letters that do not occur in one of the tri
 
 def recoverSecret(triplets):
     'triplets is a list of triplets from the secrent string. Return the string.'
+    list = []
+    for arr in triplets:
+        for i in range(3):
+            if arr[i] not in list:
+                list.append(i)
+
+    for arr in triplets:
+        for i in range(2):
+            if list.index(arr[i]) > list.index(arr[i+1]):
+                list.remove(arr[i])
+                list.append(arr[i])
+
+    return list.join("")
 
 
 secret = "whatisup"
