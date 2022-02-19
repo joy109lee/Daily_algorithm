@@ -15,9 +15,9 @@ def recoverSecret(triplets):
     'triplets is a list of triplets from the secrent string. Return the string.'
     list = []
     for arr in triplets:
-        for i in range(3):
-            if arr[i] not in list:
-                list.append(i)
+        for char in arr:
+            if char not in list:
+                list.append(char)
 
     for arr in triplets:
         for i in range(2):
