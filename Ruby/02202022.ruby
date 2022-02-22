@@ -34,4 +34,14 @@ end
 
 
 integers = [ 3, 1719, 19, 11, 13, -21,160]
-p find_outlier(integers)
+# p find_outlier(integers)
+
+
+def short_version(integers)
+    outlier = integers.first(3).count(&:even?) < 2 ? :even? : :odd?
+    integers.find(&outlier)
+end
+
+integers = [ 4, 14, 1992, -13, 26, 28,160]
+
+p short_version(integers)
