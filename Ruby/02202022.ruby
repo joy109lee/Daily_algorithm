@@ -33,5 +33,5 @@ def find_outlier(integers)
 end
 
 
-integers = [160, 3, 1719, 19, 11, 13, -21]
+integers = [ 3, 1719, 19, 11, 13, -21,160]
 p find_outlier(integers)
