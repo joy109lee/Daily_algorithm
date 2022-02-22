@@ -15,5 +15,16 @@ Examples
 */
 
 function manhattanDistance(pointA, pointB) {
-    //TODO 
+    return Math.abs(pointA[0] - pointB[0]) + Math.abs(pointA[1] - pointB[1])
 }
+
+let pointA = [1, 1]
+let pointB = [1, 1];
+console.log(manhattanDistance(pointA, pointB))
+
+pointA = [5, 4]
+pointB = [3, 2];
+console.log(manhattanDistance(pointA, pointB))
+pointA = [1, 1]
+pointB = [0, 3];
+console.log(manhattanDistance(pointA, pointB))
