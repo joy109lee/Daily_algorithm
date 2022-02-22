@@ -11,4 +11,27 @@ Should return: 11 (the only odd number)
 Should return: 160 (the only even number)
 =end
 
+def find_outlier(integers)
+    if integers[0].odd?
+        if integers[1].odd?
+            for i in (2...integers.length)
+                return integers[i] if integers[i].even?
+            end
+        end
+        return integers[1] if integers[2].odd?
+        return integers[0]
+            
+    elsif integers[0].even? 
+        if integers[1].even?
+            for i in (2...integers.length)
+                return integers[i] if integers[i].odd?
+            end
+        end
+        return integers[1] if integers[2].even?
+        return integers[0]
+    end
+end
 
+
+integers = [ 3, 1719, 19, 11, 13, -21,160]
+p find_outlier(integers)
