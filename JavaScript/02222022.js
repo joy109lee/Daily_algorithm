@@ -20,11 +20,12 @@ function manhattanDistance(pointA, pointB) {
 
 let pointA = [1, 1]
 let pointB = [1, 1];
-console.log(manhattanDistance(pointA, pointB))
+// console.log(manhattanDistance(pointA, pointB))
 
 pointA = [5, 4]
 pointB = [3, 2];
-console.log(manhattanDistance(pointA, pointB))
+// console.log(manhattanDistance(pointA, pointB))
 pointA = [1, 1]
 pointB = [0, 3];
-console.log(manhattanDistance(pointA, pointB))
+// console.log(manhattanDistance(pointA, pointB))
+
