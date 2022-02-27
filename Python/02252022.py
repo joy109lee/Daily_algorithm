@@ -35,3 +35,14 @@ See other examples in the "Sample tests".
 
 def hist(s):
     # your code
+    return
+
+
+s = "uuaaaxbbbbyyhwawiwjjjwwxym"
+print(hist(s))
+# hist(s) = > "u  2     **\rw  5     *****\rx  2     **"
+# or with dots to see white spaces:
+# hist(s) = > "u..2.....**\rw..5.....*****\rx..2.....**"
+s = "uuaaaxbbbbyyhwawiwjjjwwxymzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz"
+print(hist(s))
+# hist(s) = > "u..2.....**\rw..5.....*****\rx..2.....**\rz..31....*******************************"
