@@ -35,3 +35,25 @@ See other examples in the "Sample tests".
 
 def hist(s):
     # your code
+    hist = {}
+    for char in s:
+        if char in ['u', 'w', 'x', 'z']:
+            if char in hist:
+                hist[char] += 1
+            else:
+                hist[char] = 0
+    str = ""
+    for k, v in hist.items():
+        star = '*' * v
+        str += f'{k}..{v}.....{star}\n'
+    return str
+
+
+s = "uuaaaxbbbbyyhwawiwjjjwwxym"
+print(hist(s))
+# hist(s) = > "u  2     **\rw  5     *****\rx  2     **"
+# or with dots to see white spaces:
+# hist(s) = > "u..2.....**\rw..5.....*****\rx..2.....**"
+s = "uuaaaxbbbbyyhwawiwjjjwwxymzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz"
+print(hist(s))
+# hist(s) = > "u..2.....**\rw..5.....*****\rx..2.....**\rz..31....*******************************"
