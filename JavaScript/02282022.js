@@ -10,3 +10,6 @@ XO("zpzpzpp") => true // when no 'x' and 'o' is present should return true
 XO("zzoo") => false
 */
 
+function XO(str) {
+    //code here
+}
