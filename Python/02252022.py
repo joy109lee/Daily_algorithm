@@ -35,7 +35,18 @@ See other examples in the "Sample tests".
 
 def hist(s):
     # your code
-    return
+    hist = {}
+    for char in s:
+        if char in ['u', 'w', 'x', 'z']:
+            if char in hist:
+                hist[char] += 1
+            else:
+                hist[char] = 0
+    str = ""
+    for k, v in hist.items():
+        star = '*' * v
+        str += f'{k}..{v}.....{star}\n'
+    return str
 
 
 s = "uuaaaxbbbbyyhwawiwjjjwwxym"
