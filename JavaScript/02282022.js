@@ -11,5 +11,16 @@ XO("zzoo") => false
 */
 
 function XO(str) {
-    //code here
+    obj = { 'x': 0, 'o': 0 }
+    str = str.toLowerCase()
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] === 'x') {
+            obj['x'] += 1
+        } else if (str[i] === 'o') {
+            obj['o'] += 1
+        }
+    }
+    return obj['x'] === obj['o']
 }
+
+console.log(XO("ooxXm"))
