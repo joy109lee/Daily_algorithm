@@ -15,10 +15,11 @@ function XO(str) {
     for (let i = 0; i < str.length; i++) {
         if (str[i] === 'x') {
             obj['x'] += 1
-        } else if (str[i === 'o']) {
+        } else if (str[i] === 'o') {
             obj['o'] += 1
         }
     }
+    console.log(obj)
     return obj['x'] === obj['o']
 }
 
