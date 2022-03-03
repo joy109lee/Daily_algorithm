@@ -23,3 +23,11 @@ def data_reverse(data):
     for i in range(loop):
         new_data, data = new_data + data[-8:], data[:-8]
     return new_data
+
+
+print(data_reverse([
+    1, 1, 1, 1, 1, 1, 1, 1,
+    0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 1, 1, 1, 1,
+    1, 0, 1, 0, 1, 0, 1, 0
+]))
