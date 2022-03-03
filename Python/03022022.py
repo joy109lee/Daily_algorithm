@@ -19,4 +19,7 @@ Note: In the C and NASM languages you are given the third parameter which is the
 
 
 def data_reverse(data):
-    pass
+    new_data, loop = [], len(data)//8
+    for i in range(loop):
+        new_data, data = new_data + data[-8:], data[:-8]
+    return new_data
