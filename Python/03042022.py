@@ -32,3 +32,7 @@ N.B. You should assume that all the test input will be valid, as specified above
 
 P.S. The situation in this kata can be likened to the more-computer-science-related idea of a thread pool, with relation to running multiple processes at the same time: https://en.wikipedia.org/wiki/Thread_pool
 """
+
+
+def queue_time(customers, n):
+    # TODO
