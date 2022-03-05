@@ -40,3 +40,8 @@ def queue_time(customers, n):
         till[0] += customer
         till.sort()
     return max(till)
+
+
+print(queue_time([5, 3, 4], 1))  # 12
+print(queue_time([10, 2, 3, 3], 2))  # 10
+print(queue_time([2, 3, 10], 2))  # 12
