@@ -35,4 +35,7 @@ P.S. The situation in this kata can be likened to the more-computer-science-rela
 
 
 def queue_time(customers, n):
-    # TODO
+    if len(customers) <= 2:
+        return max(customers)
+    if n == 1:
+        return sum(customers)
