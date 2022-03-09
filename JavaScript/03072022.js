@@ -25,4 +25,5 @@ Output should be a string, for example "20x^3".
 
 function differentiate(f) {
     //Write your code here
+
 }
