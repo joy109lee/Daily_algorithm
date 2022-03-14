@@ -11,4 +11,3 @@
 # Assertion messages may be unclear about what they display in some languages. If you read "...It Should encode XXX", the "XXX" is the expected result, not the input!
 def duplicate_encode(word):
     # your code here
- 
