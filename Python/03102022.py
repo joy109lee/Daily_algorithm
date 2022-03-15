@@ -12,6 +12,7 @@
 def duplicate_encode(word):
     appears = {}
     converted = ""
+    word = word.lower()
     for char in word:
         if char in appears:
             appears[char] += 1
@@ -23,4 +24,4 @@ def duplicate_encode(word):
     # your code here
 
 
-duplicate_encode("Success")
+duplicate_encode("(( @")
