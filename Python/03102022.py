@@ -20,7 +20,7 @@ def duplicate_encode(word):
             appears[char] = 1
     for char in word:
         converted += ")" if appears[char] > 1 else "("
-    print(converted)
+    return converted
     # your code here
 
 
