@@ -10,13 +10,16 @@
 # Notes
 # Assertion messages may be unclear about what they display in some languages. If you read "...It Should encode XXX", the "XXX" is the expected result, not the input!
 def duplicate_encode(word):
-    appears = []
+    appears = {}
     converted = ""
     for char in word:
         if char in appears:
-            converted += ")"
+            appears[char] += 1
         else:
-            converted += ""
+            appears[char] = 1
+    for char in word:
+        converted += ")" if appears[char] > 1 else "("
+    print(converted)
     # your code here
 
 
