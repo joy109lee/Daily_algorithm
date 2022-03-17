@@ -14,3 +14,6 @@ To build the triangle, start with a single 1 at the top, for each number in the 
 
 =end
 
+def pascal (p)
+
+end
