@@ -15,5 +15,22 @@ To build the triangle, start with a single 1 at the top, for each number in the 
 =end
 
 def pascal (p)
-
+    def helper(k)
+        if k == 0
+            return [1]
+        end
+        
+        previous = pascal(k - 1)
+        
+        ret = []
+        
+        (previous.length - 1).times do |i|
+            ret.push (previous[i] + previous[i + 1])
+        end
+        
+        return [1, ret, 1].flatten
+    end
+    helper(p-1)
 end
+
+p pascal(5)
