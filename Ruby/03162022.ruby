@@ -31,6 +31,6 @@ def pascal (p)
         return [1, ret, 1].flatten
     end
     helper(p-1)
-end
+    
 
 p pascal(5)
