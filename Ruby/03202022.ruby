@@ -22,3 +22,4 @@ mult_primefactor_sum(10, 100) == [16, 27, 30, 60, 70, 72, 84]
 
 mult_primefactor_sum(1, 60) == [1, 4, 16, 27, 30, 60]
 =end 
+def  -b
